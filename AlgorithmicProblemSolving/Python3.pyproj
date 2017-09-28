@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{d7c8b110-2726-481f-892e-757d050c0717}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>Dynamic_Programming\LIS\my_solution.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <Name>Python3</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Divide_Conquer\FANMEETING\test.txt" />
+    <Content Include="Divide_Conquer\FENCE\test.txt" />
+    <Content Include="Dynamic_Programming\JUMPGAME\test.txt" />
+    <Content Include="Dynamic_Programming\LIS\test.txt" />
+    <Content Include="Dynamic_Programming\TRIANGLEPATH\test.txt" />
+    <Content Include="Dynamic_Programming\WILDCARD\test.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Divide_Conquer\FANMEETING\my_solution.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Divide_Conquer\FENCE\my_solution.py" />
+    <Compile Include="Dynamic_Programming\JUMPGAME\my_solution.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dynamic_Programming\LIS\my_solution.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dynamic_Programming\TRIANGLEPATH\my_solution.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dynamic_Programming\WILDCARD\my_solution.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Divide_Conquer\" />
+    <Folder Include="Divide_Conquer\FENCE" />
+    <Folder Include="Divide_Conquer\FANMEETING\" />
+    <Folder Include="Dynamic_Programming\" />
+    <Folder Include="Dynamic_Programming\JUMPGAME\" />
+    <Folder Include="Dynamic_Programming\LIS\" />
+    <Folder Include="Dynamic_Programming\TRIANGLEPATH\" />
+    <Folder Include="Dynamic_Programming\WILDCARD\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2.0">
+  <help_text/>
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1305</x>
+      <y>423</y>
+      <w>396</w>
+      <h>486</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Controller&gt;&gt;
+ChronoTimer
+--
+_+ MAXIMUM_CHANNELS : int_
+- power : boolean
+- channels : TChannel[]
+- safe_channels : List&lt;Channel&gt;
+- runs : List&lt;TRun&gt;
+- safe_runs : List&lt;Run&gt;
+- current_run : int
+--
++ isOn() : boolean
++ setPower(on:boolean) : boolean
++ powerOn() : boolean
++ powerOff() : boolean
++ togglePower() : boolean
++ setEvent(event:EventType) : boolean
++ getChannels() : List&lt;Channel&gt;
++ getRuns() : List&lt;Run&gt;
++ getLatestRun() : Run
++ newRun() : Run
++ endRun() : boolean
++ reset() : boolean
++ trigger(c:Channel) : boolean
++ trigger(c:int) : boolean
++ connect(s:SensorType, c:Channel) : boolean
++ connect(s:SensorType, c:int) : boolean
++ disconnect(c:Channel) : boolean
++ disconnect(c:int) : boolean
++ doNotFinish() : boolean
+/+ swap() : boolean/
+--
+Responsibilities
+-- Control machine between User Interface and System </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1647</x>
+      <y>1071</y>
+      <w>270</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Component&gt;&gt;
+Channel
+--
++ id : int
++ timer : TChronoTimer
+- t : SensorType
+- enabled : boolean
+--
++ getID() : int
++ getSensorType() : SensorType
++ setSensorType(s:SensorType) : void
++ isEnabled() : boolean
++ setEnabled(e:boolean) : boolean
++ enable() : boolean
++ disable() : boolean
++ toggle() : boolean
++ trigger() : boolean
+--
+Responsibilities
+-- Control a Channel attributes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>1053</y>
+      <w>342</w>
+      <h>324</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Event&gt;&gt;
+Run
+--
+- timer : ChronoTimer
+- id : int
+- finished : boolean
+--
++ getID() : int
++ getEventType() : EventType
++ getRacers() : List&lt;Racer&gt;
++ getRecords() : Map&lt;Integer,? extends Record&gt;
++ getRecord(r:Racer) : Record
++ getRecord(id:int) : Record
++ getLast() ; Racer
++ hasStarted() : boolean
++ isFinished() : boolean
++ addRacer(id:int) : Racer
++ endRun() : boolean
++ doNotFinish() : boolean
++ removeRacer(target:int) : boolean
+--
+Responsibilities
+-- store racer's info</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>738</x>
+      <y>252</y>
+      <w>171</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Tool&gt;&gt;
+Exporter
+--
+_- gson : Gson_
+--
+_+ export(run:Run) : void_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>1080</y>
+      <w>225</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Racer
+--
+- id : int
+- start : long
+- finish : long
+- ended : boolean
+--
++ getID() : int
++ didNotFinish() : boolean
++ getStartTime() : long
++ getFinishTime() : long
++ getElapsedTime() : long
+--
+Responsibilities
+-- </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1323</x>
+      <y>1431</y>
+      <w>351</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Event&gt;&gt;
+PARIND
+--
+- allRacers : List&lt;TRacer&gt;
+- toStart : LinkedList&lt;TRacer&gt;
+- ended : LinkedList&lt;TRacer&gt;
++ racers : List&lt;Racer&gt;
+- track1 : LinkedList&lt;TRacer&gt;
+- track2 : LinkedList&lt;TRacer&gt;
+- started : boolean
+- lastStarted : TRacer
+--
++ safeTrigger(c:Channel) : boolean
+- getTrackFromChannel(c:int) : LinkedList&lt;TRacer&gt;
++ safeRemoveRacer(target:int) : TRacer
+--
+Responsibilities
+-- </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>972</x>
+      <y>1449</y>
+      <w>288</w>
+      <h>261</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Event&gt;&gt;
+IND
+--
+- racers : LinkedList&lt;TRacer&gt;
+- toStart : LinkedList&lt;TRacer&gt;
+- toEnd : LinkedList&lt;TRacer&gt;
+- safe_racers : LinkedList&lt;Racer&gt;
+- front : int
+- back : int
+- started : boolean
+--
++ safeTrigger(c:Channel) : boolean
++ safeAddRacer(r:TRacer) : boolean
++ toString() : String
++ safeRemoveRacer(target:int) : TRacer
++ racerSearch(target:int) : TRacer
+--
+Responsibilities
+-- </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1107</x>
+      <y>873</y>
+      <w>135</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>EventType
+--
+IND
+PARIND
+GRP
+PARGRP</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1980</x>
+      <y>936</y>
+      <w>117</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>SensorType
+--
+EYE
+GATE
+PAD
+NONE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1827</x>
+      <y>522</y>
+      <w>306</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Tool&gt;&gt;
+timeManager
+--
+_- epoch : long_
+--
+_+ setTime(time:String) : void_
+_+ intoMillisecs(unformatted:String) : long_
+_+ intoMillisecs(unformatted:String[]) : long_
+_+ getTime() : long_
+_+ formatTime(input:long) : String_
+_+ subractTime(first:long,second:long) : long_
+--
+Responsibilities
+-- </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1998</x>
+      <y>27</y>
+      <w>117</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Command
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1449</x>
+      <y>162</y>
+      <w>252</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+User Interface
+--
+Responsibilities
+-- handling CLI input from user
+-- communicate with ChronoTimer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>882</x>
+      <y>459</y>
+      <w>171</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+GRacer
+--
+- id : int
+- records : GRecord[]
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>486</y>
+      <w>171</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+GRecord
+--
+- run : int
+- racer : racer
+- start : long
+- finish : long
+- ended : boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1332</x>
+      <y>900</y>
+      <w>45</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1656</x>
+      <y>900</y>
+      <w>54</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=2..12</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1863</x>
+      <y>981</y>
+      <w>135</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=1
+Connect</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1035</x>
+      <y>1368</y>
+      <w>198</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;200.0;40.0;10.0;40.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1206</x>
+      <y>1368</y>
+      <w>189</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;190.0;40.0;190.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>936</x>
+      <y>1179</y>
+      <w>162</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..n</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1224</x>
+      <y>954</y>
+      <w>90</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=0..1
+Designated</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1881</x>
+      <y>45</y>
+      <w>135</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1512</x>
+      <y>252</y>
+      <w>72</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+m2=1
+Connect</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>819</x>
+      <y>324</y>
+      <w>171</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1
+Generated</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0;170.0;100.0;170.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>657</x>
+      <y>324</y>
+      <w>135</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1
+Generated</panel_attributes>
+    <additional_attributes>130.0;10.0;130.0;110.0;10.0;110.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1062</x>
+      <y>243</y>
+      <w>171</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+GRun
+--
+- id : int
+- records : GRecord[]
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>279</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1
+Generated</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1638</x>
+      <y>0</y>
+      <w>252</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Command Line Interface
+--
+Responsibilities
+-- handling input from user
+-- communicate with ChronoTimer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1251</x>
+      <y>0</y>
+      <w>252</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Graphical User Interface
+--
+Responsibilities
+-- handling GUI input from user
+-- communicate with ChronoTimer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1359</x>
+      <y>90</y>
+      <w>216</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>220.0;80.0;220.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1548</x>
+      <y>90</y>
+      <w>216</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;40.0;220.0;40.0;220.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>612</x>
+      <y>1449</y>
+      <w>288</w>
+      <h>261</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Event&gt;&gt;
+GRP
+--
+- racers : LinkedList&lt;TRacer&gt;
+- ind : int;
+--
++ doNotFinish() : boolean
++ endRun() : boolean
++ getEventType() : EventType
++ getLast() : TRacer
++ getRacers() : List&lt;TRacer&gt;
++ hasStarted() : boolean
+- safeAddRacer(TRacer r) : boolean
+- safeRemoveRacer(int target) : boolean
+- safeTrigger(Channel c) : boolean
+--
+Responsibilities
+-- </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>747</x>
+      <y>1368</y>
+      <w>486</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>520.0;10.0;520.0;40.0;10.0;40.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>1026</y>
+      <w>225</w>
+      <h>261</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Record
+--
+- run : TRun
+- start : long
+- finish : long
+- ended : boolean
+--
+getRun() : Run
+getStartTime() : long
+getFinishTime() : long
+isFinished() : boolean
+didNotFinish() : boolean
+getElapsedTime() : boolean
+
+--
+Responsibilities
+-- </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>9</x>
+      <y>1233</y>
+      <w>225</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+RacerRecord
+--
+- racer : TRacer
+--
++ getRacer() : Racer
+--
+Responsibilities
+-- </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>990</y>
+      <w>225</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+PlaceHolderRecord
+--
+= placeHolder : int
+--
++ getPlaceHolder() : int
+--
+Responsibilities
+-- </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>1197</y>
+      <w>162</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..n</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>225</x>
+      <y>1188</y>
+      <w>153</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;60.0;10.0;60.0;140.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>1053</y>
+      <w>162</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;160.0;70.0;160.0;70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>567</x>
+      <y>108</y>
+      <w>171</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Tool&gt;&gt;
+WebServer
+--
++ gson : Gson
++ runs : HashMap
+--
++ WebServer() : void
++ start() : void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>279</y>
+      <w>108</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>315</x>
+      <y>252</y>
+      <w>342</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Tool&gt;&gt;
+WebExporter
+--
+
+--
++ WebExporter(a:String, p:int, e:JSONExporter) : void
++ export(e:Exportable) : void
++ reset() : void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1728</x>
+      <y>1431</y>
+      <w>351</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Event&gt;&gt;
+PARGRP
+--
+- allRacers : List&lt;TRacer&gt;
+- toStart : LinkedList&lt;TRacer&gt;
+- ended : LinkedList&lt;TRacer&gt;
++ racers : List&lt;Racer&gt;
+- track1 : LinkedList&lt;TRacer&gt;
+- track2 : LinkedList&lt;TRacer&gt;
+- started : boolean
+- lastStarted : TRacer
+--
++ safeTrigger(c:Channel) : boolean
+- getTrackFromChannel(c:int) : LinkedList&lt;TRacer&gt;
++ safeRemoveRacer(target:int) : TRacer
+--
+Responsibilities
+-- </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1206</x>
+      <y>1368</y>
+      <w>729</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;790.0;40.0;790.0;70.0</additional_attributes>
+  </element>
+</diagram>

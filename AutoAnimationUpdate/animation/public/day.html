@@ -1,0 +1,23 @@
+<div class="page-header">
+  <h1> {{ day }} &nbsp; <small>This page shows a list of aniamtions on {{ day }}</small></h1>
+</div>
+<uib-accordion close-others="oneAtATime">
+    <div uib-accordion-group class="panel-default" is-open="status.open" ng-repeat="animation in animations">
+        <uib-accordion-heading>
+            <span ng-show="profile != null  && profile.getEmail() == 'wlfka102@gmail.com' ">
+                <button type="button" class="btn btn-primary" ng-click="update(animation.team, animation.title)" ng-show="animation.day != 'Fin'" >Update</button>
+                <button type="button" class="btn btn-success" ng-click="day(animation.team, animation.title, 'Fin')" ng-show="animation.day != 'Fin'">Finish</button>
+                <button type="button" class="btn btn-danger" ng-click="delete(animation.team, animation.title)">Delete</button>
+            </span>
+            <b>{{animation.title}}</b> &nbsp; <span class="label label-info">{{ animation.episodes.length }}</span>
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+        </uib-accordion-heading>
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="episode in animation.episodes | orderBy: '-number'">
+                <button type="button" class="btn btn-default" ng-click="openEpisodeModal(episode)">
+                    {{ animation.title }} - Episode <span class="label label-success"> {{ episode.number }}</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+</uib-accordion>

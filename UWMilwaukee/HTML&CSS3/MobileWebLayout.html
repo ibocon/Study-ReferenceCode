@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>MobileWebLayout Study</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+        <!--initialization-->
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: 'Indie Flower', cursive, serif;
+            }
+            li {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+            }
+        </style>
+        <!--header-->
+        <style>
+            #main_header {
+                height: 45px;
+                background: url('header_background.png');
+
+                position: relative;
+                text-align: center;
+                line-height: 45px;
+            }
+                #main_header > h1 {
+                    color: white;
+                }
+                #main_header > a, #main_header > label {
+                    display: block;
+                    height: 32px;
+                    position: absolute;
+                }
+                    #main_header > a.left {
+                        width: 62px;
+                        left: 5px;
+                        top: 7px;
+                    }
+                    #main_header > label.right {
+                        width: 32px;
+                        right: 5px;
+                        top: 7px;
+                    }
+        </style>
+        <!--sprite image-->
+        <style>
+            #main_header > a.left {
+                background: url('sprites.png');
+                background-position: 0px 0px;
+                text-indent: -9999px;
+            }
+            #main_header > label.right {
+                background: url('sprites.png');
+                background-position: -62px 0px;
+                text-indent: -9999px;
+            }
+        </style>
+        <!--toggle list-->
+        <style>
+            #toggle {
+                display: none;
+            }
+                #toggle + #wrap > #toggle_gnb_wrap {
+                    display: none;
+                }
+                #toggle:checked + #wrap > #toggle_gnb_wrap {
+                    display: block;
+                }
+
+            #toggle_gnb_wrap {
+                background: #a3f53a;
+                padding: 15px;
+            }
+            #toggle_gnb {
+                background: #ff6a00;
+                padding: 5px;
+            }
+
+                #toggle_gnb > ul {
+                    overflow: hidden;
+                }
+                    #toggle_gnb > ul > li {
+                        width: 80px;
+                        float: left;
+                    }
+        </style>
+        <!--navigation(1)-->
+        <style>
+            #top_gnb {
+                overflow: hidden;
+                border-bottom: 1px solid black;
+                background: #17be6c;
+            }
+                #top_gnb > div > a {
+                    float: left;
+                    width: 25%;
+
+                    height: 35px;
+                    line-height: 35px;
+                    text-align: center;
+                    color: white;
+                }
+        </style>
+        <!--navigation(2)-->
+        <style>
+            #bottom_gnb {
+                display: table;
+                width: 100%;
+                border-bottom: 1px solid black;
+            }
+                #bottom_gnb > div {
+                    display: table-cell;
+                    position: relative;
+                }
+                    #bottom_gnb > div > a {
+                        display: block;
+                        height: 35px;
+                        line-height: 35px;
+                        text-align: center;
+                    }
+                        #bottom_gnb > div > a::before {
+                            display: block;
+                            position: absolute;
+                            top: 9px;
+                            left: -1px;
+                            width: 1px;
+                            height: 15px;
+                            border-left: 1px solid black;
+                            content: '';
+                        }
+        </style>
+        <!--main-->
+        <style>
+            #section_header {
+                padding: 20px;
+            }
+            #section_article {
+                padding: 10px;
+            }
+        </style>
+        <!--footer-->
+        <style>
+            #main_footer {
+                padding: 10px;
+                border-top: 3px solid black;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <input id="toggle" type="checkbox" />
+        <div id="wrap">
+            <header id="main_header">
+                <a class="left" href="#">Main</a>
+                <h1>Mobile</h1>
+                <label class="right" for="toggle" onclick="">Toggle</label>
+            </header>
+            <div id="toggle_gnb_wrap">
+                <div id="toggle_gnb">
+                    <ul>
+                        <li><a href="#">button</a></li>
+                        <li><a href="#">button</a></li>
+                        <li><a href="#">button</a></li>
+                        <li><a href="#">button</a></li>
+                        <li><a href="#">button</a></li>
+                        <li><a href="#">button</a></li>
+                        <li><a href="#">button</a></li>
+                        <li><a href="#">button</a></li>
+                    </ul>
+                </div>
+            </div>
+            <nav id="top_gnb">
+                <div><a href="#">botton</a></div>
+                <div><a href="#">botton</a></div>
+                <div><a href="#">botton</a></div>
+                <div><a href="#">botton</a></div>
+            </nav>
+            <nav id="bottom_gnb">
+                <div><a href="#">botton</a></div>
+                <div><a href="#">botton</a></div>
+                <div><a href="#">botton</a></div>
+                <div><a href="#">botton</a></div>
+            </nav>
+            <section id="main_section">
+                <header id="section_header">
+                    <h1>Lorem ipsum</h1>
+                    <time>2015-01-08 - Thursday</time>
+                </header>
+                <article id="section_article">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempus fermentum volutpat. Duis eget nunc sed ligula facilisis tristique. Curabitur dignissim ligula nec luctus placerat. Donec ut nisi ut tortor maximus accumsan. Nam dolor eros, finibus vitae consectetur in, tincidunt quis dui. Proin faucibus eget augue vel gravida. Nullam lectus felis, varius sit amet justo quis, molestie fringilla leo. Pellentesque suscipit nec nibh eget placerat. In tempor maximus nunc vel accumsan. Aenean eu augue pharetra justo consequat ullamcorper ac a ex. Suspendisse augue ipsum, posuere non eros nec, hendrerit viverra mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras maximus, velit ullamcorper faucibus molestie, odio lacus interdum justo, sit amet tincidunt neque massa et magna. Etiam at sagittis erat. Suspendisse at gravida sapien, vel porta odio.</p>
+                    <br />
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempus fermentum volutpat. Duis eget nunc sed ligula facilisis tristique. Curabitur dignissim ligula nec luctus placerat. Donec ut nisi ut tortor maximus accumsan. Nam dolor eros, finibus vitae consectetur in, tincidunt quis dui. Proin faucibus eget augue vel gravida. Nullam lectus felis, varius sit amet justo quis, molestie fringilla leo. Pellentesque suscipit nec nibh eget placerat. In tempor maximus nunc vel accumsan. Aenean eu augue pharetra justo consequat ullamcorper ac a ex. Suspendisse augue ipsum, posuere non eros nec, hendrerit viverra mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras maximus, velit ullamcorper faucibus molestie, odio lacus interdum justo, sit amet tincidunt neque massa et magna. Etiam at sagittis erat. Suspendisse at gravida sapien, vel porta odio.</p>
+                    <br />
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempus fermentum volutpat. Duis eget nunc sed ligula facilisis tristique. Curabitur dignissim ligula nec luctus placerat. Donec ut nisi ut tortor maximus accumsan. Nam dolor eros, finibus vitae consectetur in, tincidunt quis dui. Proin faucibus eget augue vel gravida. Nullam lectus felis, varius sit amet justo quis, molestie fringilla leo. Pellentesque suscipit nec nibh eget placerat. In tempor maximus nunc vel accumsan. Aenean eu augue pharetra justo consequat ullamcorper ac a ex. Suspendisse augue ipsum, posuere non eros nec, hendrerit viverra mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras maximus, velit ullamcorper faucibus molestie, odio lacus interdum justo, sit amet tincidunt neque massa et magna. Etiam at sagittis erat. Suspendisse at gravida sapien, vel porta odio.</p>
+                </article>
+            </section>
+            <gooter id="main_footer">
+                <h3>HTML5 + CSS3 Basic</h3>
+                <address>Webside Layout Basic</address>
+            </gooter>
+        </div>
+    </body>
+</html>

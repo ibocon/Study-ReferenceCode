@@ -1,0 +1,35 @@
+<div class="page-header">
+  <h1>Register New Animation &nbsp; <small> Registeration requires direct update by FTP when you update a finished animation.</small></h1>
+</div>
+<form ng-submit="register(team, title, day, episode)">
+    <div class="form-group">
+        <label for="team">Animation Team</label>
+        <input type="text" class="form-control" id="team" placeholder="Animation Team" ng-model="team">
+    </div>
+    <br/>
+    <div class="form-group">
+        <label for="title">Animation Title</label>
+        <input type="text" class="form-control" id="title" placeholder="Animation Title" ng-model="title">
+    </div>
+    <br/>
+    <div class="btn-group">
+        <label>Animation Day</label>
+        <div>
+            <label class="btn btn-info" ng-model="day" uib-btn-radio="'Mon'">Mon</label>
+            <label class="btn btn-info" ng-model="day" uib-btn-radio="'Tue'">Tue</label>
+            <label class="btn btn-info" ng-model="day" uib-btn-radio="'Wed'">Wed</label>
+            <label class="btn btn-info" ng-model="day" uib-btn-radio="'Thu'">Thu</label>
+            <label class="btn btn-info" ng-model="day" uib-btn-radio="'Fri'">Fri</label>
+            <label class="btn btn-info" ng-model="day" uib-btn-radio="'Sat'">Sat</label>
+            <label class="btn btn-info" ng-model="day" uib-btn-radio="'Sun'">Sun</label>
+            <label class="btn btn-primary" ng-model="day" uib-btn-radio="'Fin'">Fin</label>
+        </div>
+        <br/><br/>
+    </div>
+    <div class="form-group">
+        <label for="episode">Animation's Last Episode Number</label>
+        <input type="number" class="form-control" id="episode" placeholder="Last Episode Number" ng-model="episode">
+    </div>
+    <hr/>
+     <button type="submit" class="btn btn-success center-block">[ {{team}} ] {{title}} : {{episode}} at {{day}}</button>
+</form>

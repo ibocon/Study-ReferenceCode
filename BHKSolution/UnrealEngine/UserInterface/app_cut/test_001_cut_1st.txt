@@ -1,0 +1,202 @@
+test_001_cut_1st.psd currently have 2 layer(s)(= artLayers+layerSets) open.
+test_001_cut_1st.psd currently have 0 artLayer(s) open.
+test_001_cut_1st.psd currently have 2 layerSet(s) open.
+script version : 1.7
+
+
+This group is @imgjpg
+bg
+    X1, Y1, X2, Y2(0 px,  0 px,  1920 px,  1080 px)
+    Width, Height (1920 px,  1080 px)
+
+
+This group is @imgpng
+logo
+    X1, Y1, X2, Y2(0 px,  0 px,  493 px,  218 px)
+    Width, Height (493 px,  218 px)
+icon_on_12
+    X1, Y1, X2, Y2(1396 px,  970 px,  1469 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_on_11
+    X1, Y1, X2, Y2(1310 px,  970 px,  1383 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_on_10
+    X1, Y1, X2, Y2(1224 px,  970 px,  1297 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_on_09
+    X1, Y1, X2, Y2(1138 px,  970 px,  1211 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_on_08
+    X1, Y1, X2, Y2(1052 px,  970 px,  1125 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_on_07
+    X1, Y1, X2, Y2(966 px,  970 px,  1039 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_on_06
+    X1, Y1, X2, Y2(880 px,  970 px,  953 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_on_05
+    X1, Y1, X2, Y2(794 px,  970 px,  867 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_on_04
+    X1, Y1, X2, Y2(708 px,  970 px,  781 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_on_03
+    X1, Y1, X2, Y2(622 px,  970 px,  695 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_on_02
+    X1, Y1, X2, Y2(536 px,  970 px,  609 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_on_01
+    X1, Y1, X2, Y2(450 px,  970 px,  523 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_static_12
+    X1, Y1, X2, Y2(1396 px,  970 px,  1469 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_static_11
+    X1, Y1, X2, Y2(1310 px,  970 px,  1383 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_static_10
+    X1, Y1, X2, Y2(1224 px,  970 px,  1297 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_static_09
+    X1, Y1, X2, Y2(1138 px,  970 px,  1211 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_static_08
+    X1, Y1, X2, Y2(1052 px,  970 px,  1125 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_static_07
+    X1, Y1, X2, Y2(966 px,  970 px,  1039 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_static_06
+    X1, Y1, X2, Y2(880 px,  970 px,  953 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_static_05
+    X1, Y1, X2, Y2(794 px,  970 px,  867 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_static_04
+    X1, Y1, X2, Y2(708 px,  970 px,  781 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_static_03
+    X1, Y1, X2, Y2(622 px,  970 px,  695 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_static_02
+    X1, Y1, X2, Y2(536 px,  970 px,  609 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_static_01
+    X1, Y1, X2, Y2(450 px,  970 px,  523 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_off_12
+    X1, Y1, X2, Y2(1396 px,  970 px,  1469 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_off_11
+    X1, Y1, X2, Y2(1310 px,  970 px,  1383 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_off_10
+    X1, Y1, X2, Y2(1224 px,  970 px,  1297 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_off_09
+    X1, Y1, X2, Y2(1138 px,  970 px,  1211 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_off_08
+    X1, Y1, X2, Y2(1052 px,  970 px,  1125 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_off_07
+    X1, Y1, X2, Y2(966 px,  970 px,  1039 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_off_06
+    X1, Y1, X2, Y2(880 px,  970 px,  953 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_off_05
+    X1, Y1, X2, Y2(794 px,  970 px,  867 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_off_04
+    X1, Y1, X2, Y2(708 px,  970 px,  781 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_off_03
+    X1, Y1, X2, Y2(622 px,  970 px,  695 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_off_02
+    X1, Y1, X2, Y2(536 px,  970 px,  609 px,  1042 px)
+    Width, Height (73 px,  72 px)
+icon_off_01
+    X1, Y1, X2, Y2(450 px,  970 px,  523 px,  1042 px)
+    Width, Height (73 px,  72 px)
+title_12
+    X1, Y1, X2, Y2(1409 px,  1055 px,  1457 px,  1072 px)
+    Width, Height (48 px,  17 px)
+title_11
+    X1, Y1, X2, Y2(1324 px,  1055 px,  1371 px,  1072 px)
+    Width, Height (47 px,  17 px)
+title_10
+    X1, Y1, X2, Y2(1233 px,  1055 px,  1288 px,  1068 px)
+    Width, Height (55 px,  13 px)
+title_09
+    X1, Y1, X2, Y2(1144 px,  1055 px,  1205 px,  1068 px)
+    Width, Height (61 px,  13 px)
+title_08
+    X1, Y1, X2, Y2(1055 px,  1055 px,  1126 px,  1068 px)
+    Width, Height (71 px,  13 px)
+title_07
+    X1, Y1, X2, Y2(960 px,  1055 px,  1046 px,  1072 px)
+    Width, Height (86 px,  17 px)
+title_06
+    X1, Y1, X2, Y2(900 px,  1055 px,  934 px,  1068 px)
+    Width, Height (34 px,  13 px)
+title_05
+    X1, Y1, X2, Y2(813 px,  1055 px,  850 px,  1068 px)
+    Width, Height (37 px,  13 px)
+title_04
+    X1, Y1, X2, Y2(709 px,  1055 px,  782 px,  1068 px)
+    Width, Height (73 px,  13 px)
+title_03
+    X1, Y1, X2, Y2(621 px,  1055 px,  697 px,  1072 px)
+    Width, Height (76 px,  17 px)
+title_02
+    X1, Y1, X2, Y2(530 px,  1055 px,  615 px,  1069 px)
+    Width, Height (85 px,  14 px)
+title_01
+    X1, Y1, X2, Y2(449 px,  1055 px,  524 px,  1068 px)
+    Width, Height (75 px,  13 px)
+description_right
+    X1, Y1, X2, Y2(112 px,  840 px,  344 px,  1069 px)
+    Width, Height (232 px,  229 px)
+description_left
+    X1, Y1, X2, Y2(1539 px,  864 px,  1846 px,  1069 px)
+    Width, Height (307 px,  205 px)
+obj_trans_bt_x
+    X1, Y1, X2, Y2(1850 px,  668 px,  1874 px,  691 px)
+    Width, Height (24 px,  23 px)
+obj_trans_bt_o_01
+    X1, Y1, X2, Y2(1740 px,  792 px,  1758 px,  810 px)
+    Width, Height (18 px,  18 px)
+obj_trans_bt_o_02
+    X1, Y1, X2, Y2(1739 px,  754 px,  1757 px,  772 px)
+    Width, Height (18 px,  18 px)
+obj_trans_arrow4_move_on_04
+    X1, Y1, X2, Y2(1547 px,  789 px,  1613 px,  821 px)
+    Width, Height (66 px,  32 px)
+obj_trans_arrow4_move_on_03
+    X1, Y1, X2, Y2(1603 px,  763 px,  1652 px,  791 px)
+    Width, Height (49 px,  28 px)
+obj_trans_arrow4_move_on_02
+    X1, Y1, X2, Y2(1559 px,  743 px,  1602 px,  764 px)
+    Width, Height (43 px,  21 px)
+obj_trans_arrow4_move_on_01
+    X1, Y1, X2, Y2(1511 px,  763 px,  1558 px,  791 px)
+    Width, Height (47 px,  28 px)
+obj_trans_arrow4_re_on
+    X1, Y1, X2, Y2(1555 px,  765 px,  1605 px,  790 px)
+    Width, Height (50 px,  25 px)
+obj_trans_arrow2_02
+    X1, Y1, X2, Y2(1660 px,  787 px,  1688 px,  822 px)
+    Width, Height (28 px,  35 px)
+obj_trans_arrow2_01
+    X1, Y1, X2, Y2(1660 px,  743 px,  1688 px,  778 px)
+    Width, Height (28 px,  35 px)
+obj_trans_bg
+    X1, Y1, X2, Y2(1489 px,  657 px,  1886 px,  847 px)
+    Width, Height (397 px,  190 px)
+icon_background
+    X1, Y1, X2, Y2(-108 px,  887 px,  2079 px,  1080 px)
+    Width, Height (2187 px,  193 px)

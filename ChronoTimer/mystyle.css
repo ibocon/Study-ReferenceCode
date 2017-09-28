@@ -1,0 +1,27 @@
+body {
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 1000px;
+	margin-left:auto;
+	margin-right:auto;
+}
+th {
+	text-align: left;
+	background-color: purple;
+	color: white;
+}
+th, td {
+	text-align: left;
+	padding: 8px;
+}
+a:visited, a:link {
+	color: white;
+}
+a:hover {
+	color: pink;
+}
+tr:nth-child(even) {
+	background-color: #D1D0CE;
+}

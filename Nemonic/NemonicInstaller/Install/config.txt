@@ -1,0 +1,5 @@
+;!@Install@!UTF-8!
+Title="nemonic v1.2.0"
+BeginPrompt="Do you want to install nemonic  v1.2.0?"
+RunProgram="setup.exe"
+;!@InstallEnd@!

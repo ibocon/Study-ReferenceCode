@@ -1,0 +1,28 @@
+test_001_cut_2nd_로딩.psd currently have 1 layer(s)(= artLayers+layerSets) open.
+test_001_cut_2nd_로딩.psd currently have 0 artLayer(s) open.
+test_001_cut_2nd_로딩.psd currently have 1 layerSet(s) open.
+script version : 1.7
+
+
+This group is @imgpng
+loading_icon_home
+    X1, Y1, X2, Y2(536 px,  970 px,  609 px,  1042 px)
+    Width, Height (73 px,  72 px)
+loading_icon_text
+    X1, Y1, X2, Y2(530 px,  1055 px,  615 px,  1069 px)
+    Width, Height (85 px,  14 px)
+loading_bi
+    X1, Y1, X2, Y2(697 px,  311 px,  1194 px,  420 px)
+    Width, Height (497 px,  109 px)
+loading_text_loading
+    X1, Y1, X2, Y2(900 px,  510 px,  1022 px,  547 px)
+    Width, Height (122 px,  37 px)
+loading_arrow
+    X1, Y1, X2, Y2(541 px,  826 px,  686 px,  960 px)
+    Width, Height (145 px,  134 px)
+loading_text_arrow
+    X1, Y1, X2, Y2(692 px,  806 px,  1049 px,  865 px)
+    Width, Height (357 px,  59 px)
+loading_bg_opacity70
+    X1, Y1, X2, Y2(0 px,  0 px,  1920 px,  1080 px)
+    Width, Height (1920 px,  1080 px)

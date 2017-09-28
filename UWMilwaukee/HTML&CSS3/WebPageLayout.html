@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebPageLayout Study</title>
+        <link href='http://fonts.googleapis.com/css?family=Henny+Penny' rel='stylesheet' type='text/css'>
+        <!--initialize-->
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: 'Times New Roman', serif;
+            }
+            li {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+            
+            }
+            img {
+                border: 0;
+            }
+        </style>
+        <!--header-->
+        <style>
+            #main_header {
+                width: 950px;
+                margin: 0 auto;
+                height: 160px;
+                position: relative;
+
+            }
+                #main_header > #title {
+                    position: absolute;
+                    left: 20px;
+                    top: 30px;
+                }
+                #main_header > #main_gnb {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                #main_header > #main_lnb {
+                    position: absolute;
+                    right: 0;
+                    bottom: 10px;
+                }
+        </style>
+        <!--title-->
+        <style>
+            #title {
+                font-family: 'Henny Penny', cursive;
+            }
+        </style>
+        <!--menu(1)-->
+        <style>
+            #main_gnb > ul {
+                overflow: hidden;
+            }
+                #main_gnb > ul > li {
+                    float: left;
+                }
+                    #main_gnb > ul > li > a {
+                        display: block;
+                        padding: 2px 10px;
+                        border: 1px solid black;
+                    }
+                        #main_gnb > ul > li > a:hover {
+                            background: black;
+                            color: white;
+                        }
+                    #main_gnb > ul > li:first-child > a {
+                        border-radius: 10px 0 0 10px;
+                    }
+                    #main_gnb > ul > li:last-child > a {
+                        border-radius: 0 10px 10px 0;
+                    }
+        </style>
+        <!--menu(2)-->
+        <style>
+            #main_lnb > ul {
+                overflow: hidden;
+            }
+                #main_lnb > ul > li {
+                    float: left;
+                }
+                    #main_lnb > ul > li > a {
+                        display: block;
+                        padding: 10px 20px;
+                        border: 1px solid black;
+                    }
+                     #main_lnb > ul > li > a:hover {
+                            background: black;
+                            color: white;
+                        }
+                    #main_lnb > ul > li:first-child > a {
+                        border-radius: 10px 0 0 10px;
+                    }
+                    #main_lnb > ul > li:last-child > a {
+                        border-radius: 0 10px 10px 0;
+                    }
+        </style>
+        <!--content-->
+        <style>
+            #content {
+                width: 950px;
+                margin: 0 auto;
+
+                overflow: hidden;
+            }
+                #content > #main_section {
+                    width: 740px;
+                    float: left;
+                }
+                #content > #main_aside {
+                    width: 190px;
+                    float: right;
+                }
+        </style>
+        <!--main-->
+        <style>
+            #main_section > article.main_article {
+                margin-bottom: 10px;
+                padding: 20px;
+                border: 1px solid black;
+            }
+        </style>
+        <!--side-->
+        <style>
+            /*first tab*/
+            input:nth-of-type(1) {
+                display: none;
+            }
+                input:nth-of-type(1) ~ div:nth-of-type(1) {
+                    display: none;
+                }
+                input:nth-of-type(1):checked ~ div:nth-of-type(1) {
+                    display: block;
+                }
+
+            input:nth-of-type(2) {
+                display: none;
+            }
+            input:nth-of-type(2) ~ div:nth-of-type(2) {
+                    display: none;
+                }
+                input:nth-of-type(2):checked ~ div:nth-of-type(2) {
+                    display: block;
+                }
+
+            section.buttons {
+                overflow:hidden;
+            }
+                section.buttons > label {
+                    display: block;
+                    float: left;
+                    width: 95px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    box-sizing: border-box;
+                    border: 1px solid black;
+                    background: white;
+                    color: black;
+
+                }
+            input:nth-of-type(1):checked ~ section.buttons > label:nth-of-type(1) {
+                background: black;
+                color: white;
+            }
+            input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2) {
+                background: black;
+                color: white;
+            }
+        </style>
+        <!--list-->
+        <style>
+            .item {
+                overflow: hidden;
+                padding: 10px;
+                border: 1px solid black;
+                border-top: none;
+            }
+            .thumbnail {
+                float: left;
+    
+            }
+            .description {
+               float: left;
+                margin-left: 10px;
+               
+            }
+                .description > strong {
+                    display: block;
+                    width: 110px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+        </style>
+        <!--footer-->
+        <style>
+            #main_footer {
+                width: 950px;
+                margin: 0 auto;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                padding: 10px;
+                border: 1px solid black;
+                text-align:center;
+            }
+        </style>
+
+    </head>
+    <body>
+        <header id="main_header">
+            <hgroup id="title">
+                <h1>Rint Development</h1>
+                <h2>HTML5 + CSS3 Basic</h2>
+            </hgroup>
+            <nav id="main_gnb">
+                <ul>
+                    <li><a herf="#">Web</a></li>
+                    <li><a herf="#">Mobile</a></li>
+                    <li><a herf="#">Game</a></li>
+                    <li><a herf="#">Simulation</a></li>
+                    <li><a herf="#">Data</a></li>
+                </ul>
+            </nav>
+            <nav id="main_lnb">
+                 <ul>
+                    <li><a herf="#">HTML</a></li>
+                    <li><a herf="#">CSS3</a></li>
+                    <li><a herf="#">JavaScript</a></li>
+                    <li><a herf="#">jQuery</a></li>
+                    <li><a herf="#">Node.js</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="content">
+
+            <section id="main_section">
+                <article class="main_article">
+                    <h1>Main Section</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at feugiat tortor. Morbi non vestibulum arcu, eu porttitor ligula. Duis scelerisque, quam a tempor luctus, enim tortor porttitor ex, in posuere urna massa at lectus. Etiam aliquet arcu sed quam malesuada, id feugiat sem tempus. Integer sed malesuada nunc, ac convallis dui. Maecenas ultricies nisl quis feugiat pulvinar. Nunc lorem mauris, condimentum a mattis et, dictum id turpis. Morbi aliquam nibh nec mollis aliquet. Sed ullamcorper at leo in ultrices. Maecenas hendrerit eleifend nibh in tincidunt. Proin sit amet placerat dui, in convallis justo. Quisque nec varius ipsum. Suspendisse ut ipsum eget purus scelerisque condimentum et vitae velit. Nunc vitae molestie purus.</p>
+                </article>
+                <article class="main_article">
+                    <h1>Main Section</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at feugiat tortor. Morbi non vestibulum arcu, eu porttitor ligula. Duis scelerisque, quam a tempor luctus, enim tortor porttitor ex, in posuere urna massa at lectus. Etiam aliquet arcu sed quam malesuada, id feugiat sem tempus. Integer sed malesuada nunc, ac convallis dui. Maecenas ultricies nisl quis feugiat pulvinar. Nunc lorem mauris, condimentum a mattis et, dictum id turpis. Morbi aliquam nibh nec mollis aliquet. Sed ullamcorper at leo in ultrices. Maecenas hendrerit eleifend nibh in tincidunt. Proin sit amet placerat dui, in convallis justo. Quisque nec varius ipsum. Suspendisse ut ipsum eget purus scelerisque condimentum et vitae velit. Nunc vitae molestie purus.</p>
+                </article>
+                <article class="main_article">
+                    <h1>Main Section</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at feugiat tortor. Morbi non vestibulum arcu, eu porttitor ligula. Duis scelerisque, quam a tempor luctus, enim tortor porttitor ex, in posuere urna massa at lectus. Etiam aliquet arcu sed quam malesuada, id feugiat sem tempus. Integer sed malesuada nunc, ac convallis dui. Maecenas ultricies nisl quis feugiat pulvinar. Nunc lorem mauris, condimentum a mattis et, dictum id turpis. Morbi aliquam nibh nec mollis aliquet. Sed ullamcorper at leo in ultrices. Maecenas hendrerit eleifend nibh in tincidunt. Proin sit amet placerat dui, in convallis justo. Quisque nec varius ipsum. Suspendisse ut ipsum eget purus scelerisque condimentum et vitae velit. Nunc vitae molestie purus.</p>
+                </article>
+                
+            </section>
+
+            <aside id="main_aside">
+                <input id="first" type="radio" name="tab" checked="checked" />
+                <input id="second" type="radio" name="tab" />
+                <section class="buttons">
+                    <label for="first">First</label>
+                    <label for="second">Second</label>
+                </section>
+                <div class="tab_item">
+                    <ul>
+                        <li class="item">
+                            <a href="#">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/45x45" />
+                            </div>
+                            <div class="description">
+                                <strong>HTML5 Canvas</strong>
+                                <p>2015-01-07</p>
+                            </div>
+                            </a>
+                        </li>
+                         <li class="item">
+                            <a href="#">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/45x45" />
+                            </div>
+                            <div class="description">
+                                <strong>HTML5 Audio</strong>
+                                <p>2015-01-07</p>
+                            </div>
+                            </a>
+                        </li>
+                         <li class="item">
+                            <a href="#">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/45x45" />
+                            </div>
+                            <div class="description">
+                                <strong>HTML5 Video</strong>
+                                <p>2015-01-07</p>
+                            </div>
+                            </a>
+                        </li>
+                         <li class="item">
+                            <a href="#">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/45x45" />
+                            </div>
+                            <div class="description">
+                                <strong>HTML5 Semantic Web</strong>
+                                <p>2015-01-07</p>
+                            </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab_item">
+                    <ul>
+                         <li class="item">
+                            <a href="#">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/45x45" />
+                            </div>
+                            <div class="description">
+                                <strong>CSS3 Transition</strong>
+                                <p>2015-01-07</p>
+                            </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/45x45" />
+                            </div>
+                            <div class="description">
+                                <strong>CSS3 Animation</strong>
+                                <p>2015-01-07</p>
+                            </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/45x45" />
+                            </div>
+                            <div class="description">
+                                <strong>CSS3 Border</strong>
+                                <p>2015-01-07</p>
+                            </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/45x45" />
+                            </div>
+                            <div class="description">
+                                <strong>CSS3 Box</strong>
+                                <p>2015-01-07</p>
+                            </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
+        <footer id="main_footer">
+            <h3>HTML5 + CSS3 Basic</h3>
+            <address>Website Layout Basic</address>
+        </footer>
+    </body>
+</html>

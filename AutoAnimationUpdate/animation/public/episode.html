@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">
+        <b>Episode</b>
+        <span class="label label-success">{{ episode.number }}</span>
+        <small>You can upload your own subtitle by selecting a file. And then, select your custom subtitle at video player controller, which labeled as Custom.</small>
+    </h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <div align="center" class="embed-responsive embed-responsive-16by9">
+    <video autoplay controls class="embed-responsive-item">
+        <source ng-src="{{ episode.video }}" type="video/mp4" />
+        <track src="{{ episode.subtitle }}" kind="subtitles" srclang="ko" label="Korean" default/>
+        <track id="subtitle" src="" kind="subtitles" label="Custom" />
+    </video>
+</div>
+</div>
+<div class="modal-footer">
+    <div>
+        <input type="file" accept=".vtt" onchange="angular.element(this).scope().uploadcustomsub(this)"/>
+    </div>
+    <button class="btn btn-primary" type="button" ng-click="close()">Close</button>
+</div>

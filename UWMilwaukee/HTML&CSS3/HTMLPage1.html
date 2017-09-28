@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML TEXT Basic Page </title>
+        <style>
+            h3 {
+                color: red;
+                background-color: orange;
+            }
+            p {
+                color: blue;
+            }
+            #header {
+                width: 300px;
+                margin: 0 auto;
+                background: red;
+            }
+            #wrap {
+                width: 800px;
+                margin: 0 auto;
+                overflow hidden;
+            }
+            #aside {
+                width: 800px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            #content {
+                width: 600px;
+                float: left;
+                background: green;
+            }
+            .select {
+                color: yellowgreen;
+            }
+            h1:hover {
+                color: white;
+                background-color: greenyellow;
+            }
+            h1:active {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Hello, World!</h3>
+        <p>This is tag 'p'</p>
+        <br /><hr />
+        <a href="HTMLPage2.html">TestPage</a>
+        <a href="Https://www.github.com">Github</a>
+        <a href="#alpha">Inside Move</a>
+        <hr />
+        <h1><b>Lorem ipsum dolor sit amet</b><br />Lorem ipsum dolor sit amet</h1>
+        <h1><i>Lorem ipsum dolor sit amet</i><br />Lorem ipsum dolor sit amet</h1>
+        <h1><small>Lorem ipsum dolor sit amet</small><br />Lorem ipsum dolor sit amet</h1>
+        <h1><sub>Lorem ipsum dolor sit amet</sub><br />Lorem ipsum dolor sit amet</h1>
+        <h1><sup>Lorem ipsum dolor sit amet</sup><br />Lorem ipsum dolor sit amet</h1>
+        <h1><ins>Lorem ipsum dolor sit amet</ins><br />Lorem ipsum dolor sit amet</h1>
+        <h1><del>Lorem ipsum dolor sit amet</del><br />Lorem ipsum dolor sit amet</h1>
+        <hr />
+        <ul>
+            <li>Math231</li>
+            <li><b>ComSci251</b></li>
+            <li><i>Art100</i></li>
+        </ul>
+        <ol>
+            <li>ComSci201</li>
+            <li>ComSci251</li>
+            <li>ComSci351</li>
+        </ol>
+
+        <table border="2">
+            <tr>
+                <th>ComSci</th>
+                <th>Math</th>
+            </tr>
+            <tr>
+                <td>
+                    <dl>
+                        <dt>ComSci201</dt>
+                        <dd>Introduction</dd>
+                        <dd>Java</dd>
+                    </dl>
+                </td>
+                <td>
+                    <dl>
+                        <dt>Math231</dt>
+                        <dd>Calculous 1</dd>
+                        <dd>(Hi!)</dd>
+                    </dl>
+                </td>
+            </tr>
+            <img src="http://placehold.it/300x200" />
+            <img src="http://placehold.it/200x150" />
+            <img src="http://placehold.it/100x100" />
+        </table>
+        <form>
+            <label for="submit">label tag</label><br />
+            <input type="email" name="email" /><br />
+            <input type="password" name="password" /><br />
+            <input type="button" name="button" /><br />
+            <input type="checkbox" name="checkbox" /><br />
+            <input type="submit" name="submit" /><br />
+            <input type="text" name ="text" value="Hello, World!" /><br />
+            <hr />
+            <textarea >This is textarea, you can write a lot of text here!</textarea>
+            <hr />
+            <select>
+                <optgroup label="ComSci">
+                    <option>201</option>
+                    <option>251</option>
+                    <option>351</option>
+                </optgroup>
+                <optgroup label="Math">
+                    <option>231</option>
+                    <option>232</option>
+                    <option>333</option>
+                </optgroup>
+            </select>
+            <p>Select>>>>JavaScript</p>
+          </form>
+            <hr />
+            <form>
+                <fieldset>
+                    <legend>input form</legend>
+                    <table>
+                        <tr>
+                            <td><label for="name">name</label></td>
+                            <td><input id="name" type="text"</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mail">email</label></td>
+                            <td><input id="mail" type="email" /></td>
+                        </tr>
+                    </table>
+                    <input type="submit" />
+                </fieldset>
+            </form>
+        <hr />
+        <h1>Start! Css3</h1>
+        <div id="header">
+            <p>Header is one of example, id selector of CSS3</p>
+        </div>
+        <div id="wrap">
+            <div id="aside">
+                <h3>aside??</h3>
+            </div>
+             <div id="content">
+                <h1>Content</h1>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div>
+        <hr />
+        <ul>
+            <li class="select">Hello, World!</li>
+            <li>Hello, World!</li>
+            <li class="select">Hello, World!</li>
+            <li>Hello, World!</li>
+        </ul>
+        <hr />
+
+       </div>
+        <br />
+        <h1>User Action Selector</h1>
+        <br />
+        <br />
+        <a href="HTMLPage3.html">Special Action</a>
+        <hr />
+        <a id="alpha">Here~! inside Moving</a>
+    </body>
+</html>

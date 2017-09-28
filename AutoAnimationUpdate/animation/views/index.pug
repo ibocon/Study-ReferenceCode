@@ -1,0 +1,59 @@
+doctype html
+html
+    head
+        title= title
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" )
+        link(rel="stylesheet", href="/stylesheets/style.css")
+        meta(charset="utf-8")
+        meta(name="google-signin-client_id" content="148640275431-j8teb99llsioufkrd9pijcrk25dm1i7l.apps.googleusercontent.com")
+    body(ng-app="myApp" ng-controller="MainCtrl as main")
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+                        <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/">Home</a>
+                </div>
+                <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+                    <ul class="nav navbar-nav" ng-show="profile != null  && profile.getEmail() == 'wlfka102@gmail.com' ">
+                        <li><a href="#/register">Register</a></li>
+                        <li><a href="#/subtitle">Subtitle</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li uib-dropdown>
+                            <a uib-dropdown-toggle> Day<span class="caret"></span></a>
+                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+                                <li role="menuitem"><a href="#/days/Mon">Monday</a></li>
+                                <li role="menuitem"><a href="#/days/Tue">Tuesday</a></li>
+                                <li role="menuitem"><a href="#/days/Wed">Wednesday</a></li>
+                                <li role="menuitem"><a href="#/days/Thu">Thursday</a></li>
+                                <li role="menuitem"><a href="#/days/Fri">Friday</a></li>
+                                <li role="menuitem"><a href="#/days/Sat">Saturday</a></li>
+                                <li role="menuitem"><a href="#/days/Sun">Sunday</a></li>
+                                <li role="menuitem"><a href="#/days/Fin">Finished</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="g-signin2" data-onsuccess="onSignIn" ng-show="profile == null"></div>
+                            <img ng-src="{{ profile.getImageUrl() }}" alt="Smiley face" height="42" width="42" ng-hide="profile == null">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        div(class="container-fluid")
+            div(ng-view)
+        block content
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-route.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-resource.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-animate.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-touch.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap-tpls.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.13/ng-file-upload.min.js")
+    script(src="https://apis.google.com/js/platform.js" async defer)
+    script(src="/javascripts/myApp.js")

@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26424.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nemonic", "nemonic\nemonic.csproj", "{284D4C5B-7C2C-4494-81EF-D0C25A671F81}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "nemonicInstaller", "nemonicInstaller\nemonicInstaller.vdproj", "{8459B602-65FA-459D-B64E-1703A090DBDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{284D4C5B-7C2C-4494-81EF-D0C25A671F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{284D4C5B-7C2C-4494-81EF-D0C25A671F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{284D4C5B-7C2C-4494-81EF-D0C25A671F81}.Debug|x64.ActiveCfg = Debug|x64
+		{284D4C5B-7C2C-4494-81EF-D0C25A671F81}.Debug|x64.Build.0 = Debug|x64
+		{284D4C5B-7C2C-4494-81EF-D0C25A671F81}.Debug|x86.ActiveCfg = Release|x86
+		{284D4C5B-7C2C-4494-81EF-D0C25A671F81}.Debug|x86.Build.0 = Release|x86
+		{284D4C5B-7C2C-4494-81EF-D0C25A671F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{284D4C5B-7C2C-4494-81EF-D0C25A671F81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{284D4C5B-7C2C-4494-81EF-D0C25A671F81}.Release|x64.ActiveCfg = Release|x64
+		{284D4C5B-7C2C-4494-81EF-D0C25A671F81}.Release|x64.Build.0 = Release|x64
+		{284D4C5B-7C2C-4494-81EF-D0C25A671F81}.Release|x86.ActiveCfg = Release|x86
+		{284D4C5B-7C2C-4494-81EF-D0C25A671F81}.Release|x86.Build.0 = Release|x86
+		{8459B602-65FA-459D-B64E-1703A090DBDD}.Debug|Any CPU.ActiveCfg = Debug
+		{8459B602-65FA-459D-B64E-1703A090DBDD}.Debug|Any CPU.Build.0 = Debug
+		{8459B602-65FA-459D-B64E-1703A090DBDD}.Debug|x64.ActiveCfg = Debug
+		{8459B602-65FA-459D-B64E-1703A090DBDD}.Debug|x86.ActiveCfg = Release
+		{8459B602-65FA-459D-B64E-1703A090DBDD}.Debug|x86.Build.0 = Release
+		{8459B602-65FA-459D-B64E-1703A090DBDD}.Release|Any CPU.ActiveCfg = Release
+		{8459B602-65FA-459D-B64E-1703A090DBDD}.Release|x64.ActiveCfg = Release
+		{8459B602-65FA-459D-B64E-1703A090DBDD}.Release|x86.ActiveCfg = Release
+		{8459B602-65FA-459D-B64E-1703A090DBDD}.Release|x86.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,127 @@
+test_001_cut_2nd.psd currently have 1 layer(s)(= artLayers+layerSets) open.
+test_001_cut_2nd.psd currently have 0 artLayer(s) open.
+test_001_cut_2nd.psd currently have 1 layerSet(s) open.
+script version : 1.7
+
+
+This group is @imgpng
+sub_camera_focus
+    X1, Y1, X2, Y2(1296 px,  775 px,  1564 px,  927 px)
+    Width, Height (268 px,  152 px)
+sub_camera_img_01
+    X1, Y1, X2, Y2(0 px,  776 px,  228 px,  926 px)
+    Width, Height (228 px,  150 px)
+sub_camera_img_02
+    X1, Y1, X2, Y2(229 px,  776 px,  495 px,  926 px)
+    Width, Height (266 px,  150 px)
+sub_camera_img_03
+    X1, Y1, X2, Y2(496 px,  776 px,  762 px,  926 px)
+    Width, Height (266 px,  150 px)
+sub_camera_img_04
+    X1, Y1, X2, Y2(763 px,  776 px,  1029 px,  926 px)
+    Width, Height (266 px,  150 px)
+sub_camera_img_05
+    X1, Y1, X2, Y2(1030 px,  776 px,  1296 px,  926 px)
+    Width, Height (266 px,  150 px)
+sub_camera_img_06
+    X1, Y1, X2, Y2(1297 px,  776 px,  1563 px,  926 px)
+    Width, Height (266 px,  150 px)
+sub_camera_img_07
+    X1, Y1, X2, Y2(1564 px,  776 px,  1830 px,  926 px)
+    Width, Height (266 px,  150 px)
+sub_camera_img_08
+    X1, Y1, X2, Y2(1832 px,  776 px,  1920 px,  926 px)
+    Width, Height (88 px,  150 px)
+sub_material_focus
+    X1, Y1, X2, Y2(1208 px,  775 px,  1360 px,  927 px)
+    Width, Height (152 px,  152 px)
+sub_material_img_13
+    X1, Y1, X2, Y2(1813 px,  776 px,  1920 px,  926 px)
+    Width, Height (107 px,  150 px)
+sub_material_img_12
+    X1, Y1, X2, Y2(1662 px,  776 px,  1812 px,  926 px)
+    Width, Height (150 px,  150 px)
+sub_material_img_11
+    X1, Y1, X2, Y2(1511 px,  776 px,  1661 px,  926 px)
+    Width, Height (150 px,  150 px)
+sub_material_img_10
+    X1, Y1, X2, Y2(1360 px,  776 px,  1510 px,  926 px)
+    Width, Height (150 px,  150 px)
+sub_material_img_09
+    X1, Y1, X2, Y2(1209 px,  776 px,  1359 px,  926 px)
+    Width, Height (150 px,  150 px)
+sub_material_img_08
+    X1, Y1, X2, Y2(1058 px,  776 px,  1208 px,  926 px)
+    Width, Height (150 px,  150 px)
+sub_material_img_07
+    X1, Y1, X2, Y2(907 px,  776 px,  1057 px,  926 px)
+    Width, Height (150 px,  150 px)
+sub_material_img_06
+    X1, Y1, X2, Y2(756 px,  776 px,  906 px,  926 px)
+    Width, Height (150 px,  150 px)
+sub_material_img_05
+    X1, Y1, X2, Y2(605 px,  776 px,  755 px,  926 px)
+    Width, Height (150 px,  150 px)
+sub_material_img_04
+    X1, Y1, X2, Y2(454 px,  776 px,  604 px,  926 px)
+    Width, Height (150 px,  150 px)
+sub_material_img_03
+    X1, Y1, X2, Y2(303 px,  776 px,  453 px,  926 px)
+    Width, Height (150 px,  150 px)
+sub_material_img_02
+    X1, Y1, X2, Y2(152 px,  776 px,  302 px,  926 px)
+    Width, Height (150 px,  150 px)
+sub_material_img_01
+    X1, Y1, X2, Y2(1 px,  776 px,  151 px,  926 px)
+    Width, Height (150 px,  150 px)
+sub_scroll_bg
+    X1, Y1, X2, Y2(0 px,  775 px,  1920 px,  927 px)
+    Width, Height (1920 px,  152 px)
+sub_scroll_bar
+    X1, Y1, X2, Y2(1157 px,  939 px,  1175 px,  957 px)
+    Width, Height (18 px,  18 px)
+sub_scroll_line
+    X1, Y1, X2, Y2(461 px,  946 px,  1461 px,  948 px)
+    Width, Height (1000 px,  2 px)
+sub_option_text_option
+    X1, Y1, X2, Y2(495 px,  224 px,  559 px,  238 px)
+    Width, Height (64 px,  14 px)
+sub_option_bt_x
+    X1, Y1, X2, Y2(1420 px,  210 px,  1444 px,  233 px)
+    Width, Height (24 px,  23 px)
+sub_option_text_video
+    X1, Y1, X2, Y2(886 px,  223 px,  934 px,  237 px)
+    Width, Height (48 px,  14 px)
+sub_option_text_common
+    X1, Y1, X2, Y2(671 px,  222 px,  751 px,  237 px)
+    Width, Height (80 px,  15 px)
+sub_option_bt_submenubg_off
+    X1, Y1, X2, Y2(810 px,  209 px,  1002 px,  249 px)
+    Width, Height (192 px,  40 px)
+sub_option_bt_submenubg_on
+    X1, Y1, X2, Y2(609 px,  209 px,  801 px,  249 px)
+    Width, Height (192 px,  40 px)
+sub_option_text_applyxml
+    X1, Y1, X2, Y2(609 px,  436 px,  706 px,  454 px)
+    Width, Height (97 px,  18 px)
+sub_option_bt_cancel_on
+    X1, Y1, X2, Y2(964 px,  542 px,  1141 px,  587 px)
+    Width, Height (177 px,  45 px)
+sub_option_bt_cancel
+    X1, Y1, X2, Y2(964 px,  542 px,  1141 px,  587 px)
+    Width, Height (177 px,  45 px)
+sub_option_bt_ok_on
+    X1, Y1, X2, Y2(775 px,  542 px,  952 px,  587 px)
+    Width, Height (177 px,  45 px)
+sub_option_bt_ok
+    X1, Y1, X2, Y2(775 px,  542 px,  952 px,  587 px)
+    Width, Height (177 px,  45 px)
+sub_option_bt_search
+    X1, Y1, X2, Y2(1148 px,  465 px,  1325 px,  510 px)
+    Width, Height (177 px,  45 px)
+sub_option_textarea
+    X1, Y1, X2, Y2(599 px,  465 px,  1143 px,  510 px)
+    Width, Height (544 px,  45 px)
+sub_option_bg
+    X1, Y1, X2, Y2(0 px,  0 px,  1920 px,  1080 px)
+    Width, Height (1920 px,  1080 px)

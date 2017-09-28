@@ -1,0 +1,56 @@
+<div class="page-header">
+  <h1>Animations &nbsp; <small>This page shows a list of aniamtion's link</small></h1>
+</div>
+<div class="container-fluid">
+  <div class="row seven-cols">
+    <div class="col-md-1" ng-repeat="day in days" ng-init="animations = getDayAni(day)" ng-if="day !='Fin'">
+        <div class="panel panel-info">
+            <div class="panel-heading"><h5>{{ day }}</h5></div>
+            <div class="panel-body">
+                <uib-accordion close-others="oneAtATime">
+                    <div uib-accordion-group class="panel-default" is-open="status.open" ng-repeat="animation in animations">
+                        <uib-accordion-heading>
+                            <div ng-show="profile != null  && profile.getEmail() == 'wlfka102@gmail.com' ">
+                                <button type="button" class="btn btn-primary btn-xs" ng-click="update(animation.team, animation.title)" ng-show="animation.day != 'Fin'">New</button>
+                                <button type="button" class="btn btn-success btn-xs" ng-click="day(animation.team, animation.title, 'Fin')" ng-show="animation.day != 'Fin'">Fin</button>
+                                <button type="button" class="btn btn-danger btn-xs" ng-click="delete(animation.team, animation.title)">Del</button>
+                            </div>
+                            <h5>{{animation.title}} &nbsp; <span class="label label-info">{{ animation.episodes.length }}</span><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i></h5>
+                        </uib-accordion-heading>
+                        <ul class="list-group">
+                            <li class="list-group-item" ng-repeat="episode in animation.episodes | orderBy: '-number'">
+                                <button type="button" class="btn btn-default" ng-click="openEpisodeModal(episode)">
+                                    Episode <span class="label label-success"> {{ episode.number }}</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </uib-accordion>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div ng-init="animations = getDayAni('Fin')">
+    <div class="panel panel-info">
+        <div class="panel-heading"> <h5> Fin </h5> </div>
+        <div class="panel-body">
+            <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="panel-default" is-open="status.open" ng-repeat="animation in animations">
+                    <uib-accordion-heading>
+                        <button type="button" class="btn btn-danger" ng-click="delete(animation.team, animation.title)" ng-show="profile != null  && profile.getEmail() == 'wlfka102@gmail.com' ">Delete</button>
+                        <span class="label label-info">{{ animation.episodes.length }}</span> {{animation.title}}
+                        <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                    </uib-accordion-heading>
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="episode in animation.episodes | orderBy: '-number'">
+                            <button type="button" class="btn btn-default" ng-click="openEpisodeModal(episode)">
+                                {{ animation.title }} - Episode <span class="label label-success"> {{ episode.number }}</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </uib-accordion>
+        </div>
+    </div>
+</div>

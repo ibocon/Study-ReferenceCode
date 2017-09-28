@@ -1,0 +1,25 @@
+test_001_cut_2nd_material_submenu.psd currently have 1 layer(s)(= artLayers+layerSets) open.
+test_001_cut_2nd_material_submenu.psd currently have 0 artLayer(s) open.
+test_001_cut_2nd_material_submenu.psd currently have 1 layerSet(s) open.
+script version : 1.7
+
+
+This group is @imgpng
+sub_material_2ndtap_01_on
+    X1, Y1, X2, Y2(1120 px,  743 px,  1210 px,  770 px)
+    Width, Height (90 px,  27 px)
+sub_material_2ndtap_02_on
+    X1, Y1, X2, Y2(1214 px,  743 px,  1304 px,  770 px)
+    Width, Height (90 px,  27 px)
+sub_material_2ndtap_03_on
+    X1, Y1, X2, Y2(1308 px,  743 px,  1398 px,  770 px)
+    Width, Height (90 px,  27 px)
+sub_material_2ndtap_01
+    X1, Y1, X2, Y2(1120 px,  743 px,  1210 px,  770 px)
+    Width, Height (90 px,  27 px)
+sub_material_2ndtap_02
+    X1, Y1, X2, Y2(1214 px,  743 px,  1304 px,  770 px)
+    Width, Height (90 px,  27 px)
+sub_material_2ndtap_03
+    X1, Y1, X2, Y2(1308 px,  743 px,  1398 px,  770 px)
+    Width, Height (90 px,  27 px)

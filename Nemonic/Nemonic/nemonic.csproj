@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{284D4C5B-7C2C-4494-81EF-D0C25A671F81}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nemonic</RootNamespace>
+    <AssemblyName>nemonic</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>nemonic.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>nemonic.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\ScreenShotMenuCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ScreenShotMenuCtrl.Designer.cs">
+      <DependentUpon>ScreenShotMenuCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Element\AbstractControlDescriptionProvider.cs" />
+    <Compile Include="Controls\ColorCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ColorCtrl.Designer.cs">
+      <DependentUpon>ColorCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CommonCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CommonCtrl.Designer.cs">
+      <DependentUpon>CommonCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Element\Element.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Element\FolderElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Element\FolderElement.Designer.cs">
+      <DependentUpon>FolderElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Element\MemoElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Element\MemoElement.Designer.cs">
+      <DependentUpon>MemoElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items\ElementButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Items\ElementButton.Designer.cs">
+      <DependentUpon>ElementButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items\Pipes.cs" />
+    <Compile Include="Items\RecycleBin.cs" />
+    <Compile Include="Items\RichTextBoxIME.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NemonicContext.cs" />
+    <Compile Include="Properties\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.ko.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.ko.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\MemoCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\MemoCtrl.Designer.cs">
+      <DependentUpon>MemoCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MenuCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MenuCtrl.Designer.cs">
+      <DependentUpon>MenuCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items\NemonicDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Items\NemonicDocument.Designer.cs">
+      <DependentUpon>NemonicDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SelectCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SelectCtrl.Designer.cs">
+      <DependentUpon>SelectCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ScreenshotCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ScreenshotCtrl.Designer.cs">
+      <DependentUpon>ScreenshotCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\TabCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\TemplateCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\TemplateCtrl.Designer.cs">
+      <DependentUpon>TemplateCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Element\TemplateElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Element\TemplateElement.Designer.cs">
+      <DependentUpon>TemplateElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TitleCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TitleCtrl.Designer.cs">
+      <DependentUpon>TitleCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items\TransparentRichText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Items\TransparentRichText.Designer.cs">
+      <DependentUpon>TransparentRichText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items\ControlMoverOrResizer.cs" />
+    <Compile Include="NemonicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NemonicForm.Designer.cs">
+      <DependentUpon>NemonicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NemonicApp.cs" />
+    <Compile Include="Controls\LayersCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LayersCtrl.Designer.cs">
+      <DependentUpon>LayersCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controls\StickyCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StickyCtrl.Designer.cs">
+      <DependentUpon>StickyCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items\TransparentImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Items\TransparentImage.Designer.cs">
+      <DependentUpon>TransparentImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UtilityCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UtilityCtrl.Designer.cs">
+      <DependentUpon>UtilityCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Win32.cs" />
+    <EmbeddedResource Include="Controls\ColorCtrl.resx">
+      <DependentUpon>ColorCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CommonCtrl.resx">
+      <DependentUpon>CommonCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ScreenShotMenuCtrl.resx">
+      <DependentUpon>ScreenShotMenuCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Element\Element.resx">
+      <DependentUpon>Element.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Element\FolderElement.resx">
+      <DependentUpon>FolderElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Element\MemoElement.resx">
+      <DependentUpon>MemoElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Element\TemplateElement.resx">
+      <DependentUpon>TemplateElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.en.resx" />
+    <EmbeddedResource Include="Properties\Messages.ko.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.ko.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\MemoCtrl.resx">
+      <DependentUpon>MemoCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MenuCtrl.resx">
+      <DependentUpon>MenuCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NemonicForm.resx">
+      <DependentUpon>NemonicForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LayersCtrl.resx">
+      <DependentUpon>LayersCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ScreenshotCtrl.resx">
+      <DependentUpon>ScreenshotCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SelectCtrl.resx">
+      <DependentUpon>SelectCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StickyCtrl.resx">
+      <DependentUpon>StickyCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\TabCtrl.resx">
+      <DependentUpon>TabCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\TemplateCtrl.resx">
+      <DependentUpon>TemplateCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TitleCtrl.resx">
+      <DependentUpon>TitleCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\TransparentImage.resx">
+      <DependentUpon>TransparentImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\TransparentRichText.resx">
+      <DependentUpon>TransparentRichText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UtilityCtrl.resx">
+      <DependentUpon>UtilityCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="nemonic.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\op_menu_help_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\op_menu_help_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\op_menu_help_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\op_menu_meno_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\op_menu_meno_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\op_menu_meno_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\op_menu_set_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\op_menu_set_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\op_menu_set_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\op_menu_temp_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\op_menu_temp_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\op_menu_temp_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="nemonic.ico" />
+    <None Include="Resources\icon_menu_editmode_t.png" />
+    <None Include="Resources\icon_menu_editmode_i.png" />
+    <None Include="Resources\op_folder.png" />
+    <None Include="Resources\icon_menu_paper_small.png" />
+    <None Include="Resources\icon_menu_paper_regular.png" />
+    <None Include="Resources\icon_menu_paper_large.png" />
+    <None Include="Resources\icon_menu_sticky_top.png" />
+    <None Include="Resources\icon_menu_sticky_right.png" />
+    <None Include="Resources\icon_menu_sticky_left.png" />
+    <None Include="Resources\icon_menu_sticky_bottom.png" />
+    <None Include="Resources\op_logo.png" />
+    <None Include="Resources\op_close.png" />
+    <None Include="Resources\icon_resize.png" />
+    <None Include="Resources\icon_menu_back.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
