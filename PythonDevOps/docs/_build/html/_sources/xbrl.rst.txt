@@ -1,0 +1,38 @@
+xbrl package
+============
+
+Submodules
+----------
+
+xbrl\.XbrlContainer module
+--------------------------
+
+.. automodule:: xbrl.XbrlContainer
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+xbrl\.XbrlDocument module
+-------------------------
+
+.. automodule:: xbrl.XbrlDocument
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+xbrl\.XbrlModel module
+----------------------
+
+.. automodule:: xbrl.XbrlModel
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: xbrl
+    :members:
+    :undoc-members:
+    :show-inheritance:

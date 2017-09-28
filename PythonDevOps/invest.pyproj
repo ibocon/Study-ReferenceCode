@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1cd7865c-bdd3-4078-9505-0d1ddb944cb2}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>tests\test_all.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <Name>invest</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="docs\conf.py" />
+    <Compile Include="invest\database.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="invest\factory.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="invest\model.py" />
+    <Compile Include="invest\__init__.py" />
+    <Compile Include="tests\test_all.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\_build\html\genindex.html" />
+    <Content Include="docs\_build\html\index.html" />
+    <Content Include="docs\_build\html\modules.html" />
+    <Content Include="docs\_build\html\py-modindex.html" />
+    <Content Include="docs\_build\html\search.html" />
+    <Content Include="docs\_build\html\searchindex.js" />
+    <Content Include="docs\_build\html\xbrl.html" />
+    <Content Include="docs\_build\html\_sources\index.rst.txt" />
+    <Content Include="docs\_build\html\_sources\modules.rst.txt" />
+    <Content Include="docs\_build\html\_sources\xbrl.rst.txt" />
+    <Content Include="docs\_build\html\_static\ajax-loader.gif" />
+    <Content Include="docs\_build\html\_static\alabaster.css" />
+    <Content Include="docs\_build\html\_static\basic.css" />
+    <Content Include="docs\_build\html\_static\comment-bright.png" />
+    <Content Include="docs\_build\html\_static\comment-close.png" />
+    <Content Include="docs\_build\html\_static\comment.png" />
+    <Content Include="docs\_build\html\_static\custom.css" />
+    <Content Include="docs\_build\html\_static\doctools.js" />
+    <Content Include="docs\_build\html\_static\down-pressed.png" />
+    <Content Include="docs\_build\html\_static\down.png" />
+    <Content Include="docs\_build\html\_static\file.png" />
+    <Content Include="docs\_build\html\_static\jquery-3.1.0.js" />
+    <Content Include="docs\_build\html\_static\jquery.js" />
+    <Content Include="docs\_build\html\_static\minus.png" />
+    <Content Include="docs\_build\html\_static\plus.png" />
+    <Content Include="docs\_build\html\_static\pygments.css" />
+    <Content Include="docs\_build\html\_static\searchtools.js" />
+    <Content Include="docs\_build\html\_static\underscore-1.3.1.js" />
+    <Content Include="docs\_build\html\_static\underscore.js" />
+    <Content Include="docs\_build\html\_static\up-pressed.png" />
+    <Content Include="docs\_build\html\_static\up.png" />
+    <Content Include="docs\_build\html\_static\websupport.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="docs" />
+    <Folder Include="docs\_build\" />
+    <Folder Include="docs\_build\html" />
+    <Folder Include="docs\_build\html\_sources" />
+    <Folder Include="docs\_build\html\_static" />
+    <Folder Include="invest\" />
+    <Folder Include="tests\" />
+    <Folder Include="invest\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
