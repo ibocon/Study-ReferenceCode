@@ -42,7 +42,7 @@ namespace Solutions
 
         /// <summary>
         /// Question 1.3
-        /// 문자열 두 개를 입력으로 받아 그중 하나가 다른 하나의 순열인지 판별하는 메서드를 작성하라.
+        /// 문자열 두 개를 입력으로 받아 그중 하나가 다른 하나의 순열인지 판별하는 함수를 작성하라.
         /// </summary>
         /// <param name="original">판별기준 문자열</param>
         /// <param name="input">판별대상 문자열</param>
@@ -74,7 +74,7 @@ namespace Solutions
 
         /// <summary>
         /// Question 1.4
-        /// 주어진 문자열 내의 모든 공백을 '%20'으로 바구는 메서드를 작성하라.
+        /// 주어진 문자열 내의 모든 공백을 '%20'으로 바구는 함수를 작성하라.
         /// </summary>
         /// <param name="input">입력 문자열</param>
         /// <returns><paramref name="input"/>의 모든 공백이 '%20'으로 변환된 값</returns>
@@ -99,7 +99,7 @@ namespace Solutions
 
         /// <summary>
         /// Question 1.5
-        /// 같은 문자가 연속으로 반복될 경우, 그 횟수를 사용해 문자열을 압축하는 메서드를 구현하라.
+        /// 같은 문자가 연속으로 반복될 경우, 그 횟수를 사용해 문자열을 압축하는 함수를 구현하라.
         /// 만약, 압축할 수 없다면 원래 문자열을 반환하라.
         /// </summary>
         /// <param name="input">입력 문자열</param>
@@ -140,6 +140,126 @@ namespace Solutions
                 //압축을 시도한 적이 없으므로, 기존 문자열을 그대로 반환
                 return input;
             }
+        }
+
+        /// <summary>
+        /// Question 1.6
+        /// 이미지를 표현하는 NxN 행렬이 있다. 이미지의 각 픽셀은 4바이트로 표현된다.
+        /// 이때 이미지를 90도 회전시키는 함수를 작성하라.
+        /// (추가 행렬 사용없이 해결)
+        /// </summary>
+        /// <param name="matrix">입력된 행렬</param>
+        public void Q6_Rotate(int[,] matrix)
+        {
+            int layerCount = matrix.GetLength(0);
+
+            // 만약 제공된 행렬의 길이가 0 보다 작거나, 행과 열의 크기가 다를 경우
+            if (layerCount <= 0 || matrix.GetLength(1) != layerCount)
+            {
+                throw new System.Exception();
+            }
+
+            for (var layer = 0; layer < layerCount / 2; ++layer)
+            {
+                var first = layer;
+                var last = layerCount - 1 - layer;
+
+                for (var i = first; i < last; ++i)
+                {
+                    var offset = i - first;
+                    var top = matrix[first, i]; // save top
+
+                    // left -> top
+                    matrix[first, i] = matrix[last - offset, first];
+
+                    // bottom -> left
+                    matrix[last - offset, first] = matrix[last, last - offset];
+
+                    // right -> bottom
+                    matrix[last, last - offset] = matrix[i, last];
+
+                    // top -> right
+                    matrix[i, last] = top; // right <- saved top
+                }
+            }
+        }
+
+        /// <summary>
+        /// Question 1.7
+        /// M x N 행렬을 순회하면서 0인 원소를 발견하면,
+        /// 해당 원소가 속한 행과 열의 모든 원소를 0으로 설정하는 알고리즘을 작성하라.
+        /// </summary>
+        /// <param name="matrix">입력된 행렬</param>
+        public void Q07_SetZeros(int[,] matrix)
+        {
+            int m = matrix.GetLength(0);
+            int n = matrix.GetLength(1);
+
+            bool[] nullifyRow       = new bool[m];
+            bool[] nullifyColumn    = new bool[n];
+
+            for(int x = 0; x < m; x++)
+            {
+                for(int y = 0; y < n; y++)
+                {
+                    if(matrix[x, y] == 0)
+                    {
+                        nullifyRow[x]       = true;
+                        nullifyColumn[y]    = true;
+                    }
+                }
+            }
+
+            for(int x = 0; x < m; x++)
+            {
+                if (nullifyRow[x])
+                {
+                    for(int y = 0; y < n; y++)
+                    {
+                        matrix[x, y] = 0;
+                    }
+                }
+            }
+
+            for(int y = 0; y < n; y++)
+            {
+                if (nullifyColumn[y])
+                {
+                    for(int x = 0; x < m; x++)
+                    {
+                        matrix[x, y] = 0;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Question 1.8 (미해결)
+        /// 한 단어가 다른 단어에 포함된 문자열인지 판별하는 <code>isSubstring</code> 함수가 있다고 하자.
+        /// <paramref name="s1"/>과 <paramref name="s2"/>의 두 문자열이 주어졌을 때, 
+        /// <paramref name="s2"/>가 <paramref name="s1"/>을 회전시킨 결과인지 판별하는 코드를 <code>isSubstring</code>을 한번만 호출하도록 하여 작성하라.
+        /// </summary>
+        /// <param name="s1"><paramref name="s2"/>가 회전한 문자열인지 판별기준</param>
+        /// <param name="s2"><paramref name="s1"/>의 회전된 문자열인지 판별대상</param>
+        /// <returns><paramref name="s2"/>가 <paramref name="s1"/>를 회전시킨 결과라면 <c>ture</c></returns>
+        public bool Q08_IsRotation(string s1, string s2)
+        {
+            var len = s1.Length;
+
+            /* check that s1 and s2 are equal length and not empty */
+            if (len == s2.Length && len > 0)
+            {
+                /* concatenate s1 and s1 within new buffer */
+                var s1S1 = s1 + s1;
+                return IsSubstring(s1S1, s2);
+            }
+
+            return false;
+        }
+
+        private bool IsSubstring(string big, string small)
+        {
+            return big.IndexOf(small) >= 0;
         }
     }
 }
