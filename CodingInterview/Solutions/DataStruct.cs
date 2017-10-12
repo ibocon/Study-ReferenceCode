@@ -5,7 +5,7 @@ namespace Solutions
     {
         /// <summary>
         /// Question 1.1
-        /// 문자열에 포함된 문자들이 전부 유일한지를 검사하는 알고리즘을 구현하라.
+        /// 문자열에 포함된 문자들이 전부 유일한지를 검사하라.
         /// (다른 자료구조를 사용할 수 없는 상황)
         /// </summary>
         /// <param name="input">입력 문자열</param>
@@ -24,7 +24,7 @@ namespace Solutions
 
         /// <summary>
         /// Question 1.2
-        /// 널 문자로 끝나는 문자열을 뒤집는 함수를 구현하라.
+        /// null 문자로 끝나는 문자열을 뒤집어라.
         /// </summary>
         /// <param name="input">입력 문자열</param>
         /// <returns><paramref name="input"/>이 뒤집어진 문자열</returns>
@@ -42,7 +42,7 @@ namespace Solutions
 
         /// <summary>
         /// Question 1.3
-        /// 문자열 두 개를 입력으로 받아 그중 하나가 다른 하나의 순열인지 판별하는 함수를 작성하라.
+        /// 문자열 두 개를 입력으로 받아 그중 하나가 다른 하나의 순열인지 판별하라.
         /// </summary>
         /// <param name="original">판별기준 문자열</param>
         /// <param name="input">판별대상 문자열</param>
@@ -74,7 +74,7 @@ namespace Solutions
 
         /// <summary>
         /// Question 1.4
-        /// 주어진 문자열 내의 모든 공백을 '%20'으로 바구는 함수를 작성하라.
+        /// 주어진 문자열 내의 모든 공백을 '%20'으로 변경하라.
         /// </summary>
         /// <param name="input">입력 문자열</param>
         /// <returns><paramref name="input"/>의 모든 공백이 '%20'으로 변환된 값</returns>
@@ -99,7 +99,7 @@ namespace Solutions
 
         /// <summary>
         /// Question 1.5
-        /// 같은 문자가 연속으로 반복될 경우, 그 횟수를 사용해 문자열을 압축하는 함수를 구현하라.
+        /// 같은 문자가 연속으로 반복될 경우, 그 횟수를 사용해 문자열을 압축하라.
         /// 만약, 압축할 수 없다면 원래 문자열을 반환하라.
         /// </summary>
         /// <param name="input">입력 문자열</param>
@@ -145,7 +145,7 @@ namespace Solutions
         /// <summary>
         /// Question 1.6
         /// 이미지를 표현하는 NxN 행렬이 있다. 이미지의 각 픽셀은 4바이트로 표현된다.
-        /// 이때 이미지를 90도 회전시키는 함수를 작성하라.
+        /// 이때 이미지를 90도 회전시켜라.
         /// (추가 행렬 사용없이 해결)
         /// </summary>
         /// <param name="matrix">입력된 행렬</param>
@@ -187,7 +187,7 @@ namespace Solutions
         /// <summary>
         /// Question 1.7
         /// M x N 행렬을 순회하면서 0인 원소를 발견하면,
-        /// 해당 원소가 속한 행과 열의 모든 원소를 0으로 설정하는 알고리즘을 작성하라.
+        /// 해당 원소가 속한 행과 열의 모든 원소를 0으로 설정하라.
         /// </summary>
         /// <param name="matrix">입력된 행렬</param>
         public void Q07_SetZeros(int[,] matrix)
@@ -237,7 +237,8 @@ namespace Solutions
         /// Question 1.8 (미해결)
         /// 한 단어가 다른 단어에 포함된 문자열인지 판별하는 <code>isSubstring</code> 함수가 있다고 하자.
         /// <paramref name="s1"/>과 <paramref name="s2"/>의 두 문자열이 주어졌을 때, 
-        /// <paramref name="s2"/>가 <paramref name="s1"/>을 회전시킨 결과인지 판별하는 코드를 <code>isSubstring</code>을 한번만 호출하도록 하여 작성하라.
+        /// <paramref name="s2"/>가 <paramref name="s1"/>을 회전시킨 결과인지 판별하라.
+        /// (<code>isSubstring</code>을 한번만 호출)
         /// </summary>
         /// <param name="s1"><paramref name="s2"/>가 회전한 문자열인지 판별기준</param>
         /// <param name="s2"><paramref name="s1"/>의 회전된 문자열인지 판별대상</param>
@@ -257,6 +258,12 @@ namespace Solutions
             return false;
         }
 
+        /// <summary>
+        /// Question 1.8 Helper Func
+        /// </summary>
+        /// <param name="big"></param>
+        /// <param name="small"></param>
+        /// <returns></returns>
         private bool IsSubstring(string big, string small)
         {
             return big.IndexOf(small) >= 0;
