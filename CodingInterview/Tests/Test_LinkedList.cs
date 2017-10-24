@@ -45,34 +45,66 @@ namespace Tests
         [TestMethod]
         public void Q2_2()
         {
-            var n1 = new LinkedListNode<char>('A', null, null);
-            var n2 = new LinkedListNode<char>('B', null, n1);
-            n1.SetNext(n2);
-            var n3 = new LinkedListNode<char>('C', null, n2);
-            n2.SetNext(n3);
-            var n4 = new LinkedListNode<char>('D', null, n3);
-            n3.SetNext(n4);
-            var n5 = new LinkedListNode<char>('E', null, n4);
-            n4.SetNext(n5);
-            var n6 = new LinkedListNode<char>('F', null, n5);
-            n5.SetNext(n6);
-            var n7 = new LinkedListNode<char>('G', null, n6);
-            n6.SetNext(n7);
-            var n8 = new LinkedListNode<char>('H', null, n7);
-            n7.SetNext(n8);
+            int count = 8;
+            var sample = CreateLinkedList(8);
 
             Random rand = new Random();
-            int n = rand.Next(1, 9);
+            int n = rand.Next(1, count + 1);
 
-            var result = linkedList.Q2_GetNthNodeFromLast<char>(n1, n);
+            var result = linkedList.Q2_GetNthNodeFromLast<char>(sample, n);
 
-            var expected = n8;
+            LinkedListNode<char> expected = sample;
+            while (expected.Next != null)
+            {
+                expected = expected.Next;
+            }
+
             for(int index = 1; index < n; index++)
             {
                 expected = expected.Prev;
             }
 
             Assert.AreEqual(result.Data, expected.Data);
+        }
+
+        [TestMethod]
+        public void Q2_3()
+        {
+            int count = 8;
+            var sample = CreateLinkedList(8);
+
+            Random rand = new Random();
+            int n = rand.Next(1, count+1);
+
+            LinkedListNode<char> node = sample;
+            for (int i = 0; i < n; i++)
+            {
+                node = node.Next;
+            }
+
+            Assert.IsTrue(linkedList.Q3_DeleteNode<char>(node));
+
+            LinkedListNode<char> check = sample;
+            for (int i = 1; i < count; i++)
+            {
+                Assert.AreNotEqual(node, check);
+                check = check.Next;
+            }
+        }
+
+        private LinkedListNode<char> CreateLinkedList(int count)
+        {
+            var head = new LinkedListNode<char>('A', null, null);
+
+            LinkedListNode<char> prev = head, node;
+            for(int i = 1; i < count; i++)
+            {
+                node = new LinkedListNode<char>((char)(Convert.ToUInt16('A') + i), null, prev);
+                prev.SetNext(node);
+                prev = node;
+            }
+
+            return head;
         }
     }
 }

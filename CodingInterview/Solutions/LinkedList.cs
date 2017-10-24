@@ -81,8 +81,22 @@ namespace Solutions
         /// <returns></returns>
         public bool Q3_DeleteNode<T>(LinkedListNode<T> target)
         {
-            throw new NotImplementedException();
-        }
+            if (target == null) return false;
 
+            if(target.Prev != null)
+            {
+                target.Prev.Next = target.Next;
+            }
+
+            if(target.Next != null)
+            {
+                target.Next.Prev = target.Prev;
+            }
+
+            target.Prev = null;
+            target.Next = null;
+
+            return true;
+        }
     }
 }

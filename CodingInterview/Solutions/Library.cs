@@ -10,7 +10,6 @@ namespace Solutions
     {
         public LinkedListNode<T> Next { get; set; }
         public LinkedListNode<T> Prev { get; set; }
-        public LinkedListNode<T> Last { get; set; }
         public T Data { get; set; }
 
         public LinkedListNode(T d, LinkedListNode<T> n, LinkedListNode<T> p)
@@ -20,16 +19,9 @@ namespace Solutions
             SetPrevious(p);
         }
 
-        public LinkedListNode()
-        { }
-
         public void SetNext(LinkedListNode<T> n)
         {
             Next = n;
-            if (this == Last)
-            {
-                Last = n;
-            }
             if (n != null && n.Prev != this)
             {
                 n.SetPrevious(this);
