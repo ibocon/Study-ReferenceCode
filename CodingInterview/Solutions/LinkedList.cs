@@ -73,7 +73,7 @@ namespace Solutions
 
         /// <summary>
         /// Question 2.3
-        /// (단방향 연결 리스트) 중간에 있는 노드 하나를 삭제하라.
+        /// 중간에 있는 노드 하나를 삭제하라.
         /// (삭제할 노드에 대한 접근만 가능)
         /// </summary>
         /// <typeparam name="T"><code>LinkedListNode</code>의 Generic Type</typeparam>
@@ -97,6 +97,70 @@ namespace Solutions
             target.Next = null;
 
             return true;
+        }
+
+        /// <summary>
+        /// Question 2.4
+        /// <paramref name="pivot"/>값을 갖는 노드를 기준으로 연결 리스트를 나눠라.
+        /// (<paramref name="pivot"/>보다 작은 값을 갖는 노드가 같거나 더 큰 값을 갖는 노드들보다 앞에 오도록)
+        /// </summary>
+        /// <typeparam name="T"><code>LinkedListNode</code>의 Generic Type</typeparam>
+        /// <param name="head">리스트의 시작지점</param>
+        /// <param name="pivot">기준값</param>
+        /// <returns>새로운 head</returns>
+        public LinkedListNode<int> Partition(LinkedListNode<int> head, int pivot)
+        {
+            if (head == null) return head;
+
+            //Tail 계산
+            var tail = head;
+            int count = 1;
+            while (tail.Next != null)
+            {
+                tail = tail.Next;
+                count++;
+            }
+
+            var node = head;
+            for(int index = 0; index < count; index++)
+            {
+                var next = node.Next;
+
+                if(node.Data >= pivot)
+                {
+                    tail.Next = node;
+
+                    if (node.Prev != null) node.Prev.Next = node.Next;
+                    if (node.Next != null) node.Next.Prev = node.Prev;
+
+                    node.Prev = tail;
+                    node.Next = null;
+
+                    tail = node;
+                }
+
+                node = next;
+            }
+
+            //새로운 Head
+            var newHead = tail;
+            while (newHead.Prev != null)
+            {
+                newHead = newHead.Prev;
+            }
+            return newHead;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="list1"></param>
+        /// <param name="list2"></param>
+        /// <param name="carry"></param>
+        /// <returns></returns>
+        public LinkedListNode<int> AddLists(LinkedListNode<int> list1, LinkedListNode<int> list2, int carry)
+        {
+            return null;
         }
     }
 }
