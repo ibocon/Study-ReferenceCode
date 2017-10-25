@@ -92,6 +92,12 @@ namespace Tests
             }
         }
 
+        [TestMethod]
+        public void Q2_4()
+        {
+            
+        }
+
         private LinkedListNode<char> CreateLinkedList(int count)
         {
             var head = new LinkedListNode<char>('A', null, null);
