@@ -12,52 +12,29 @@ namespace Solutions
         public LinkedListNode<T> Prev { get; set; }
         public T Data { get; set; }
 
-        public LinkedListNode(T d, LinkedListNode<T> n, LinkedListNode<T> p)
+        public LinkedListNode(T data, LinkedListNode<T> next, LinkedListNode<T> previous)
         {
-            Data = d;
-            SetNext(n);
-            SetPrevious(p);
+            Data = data;
+            SetNext(next);
+            SetPrevious(previous);
         }
 
-        public void SetNext(LinkedListNode<T> n)
+        public void SetNext(LinkedListNode<T> next)
         {
-            Next = n;
-            if (n != null && n.Prev != this)
+            Next = next;
+            if (next != null && next.Prev != this)
             {
-                n.SetPrevious(this);
-            }
-        }
-
-        public void SetPrevious(LinkedListNode<T> p)
-        {
-            Prev = p;
-            if (p != null && p.Next != this)
-            {
-                p.SetNext(this);
+                next.SetPrevious(this);
             }
         }
 
-        public String PrintForward()
+        public void SetPrevious(LinkedListNode<T> prev)
         {
-            if (Next != null)
+            Prev = prev;
+            if (prev != null && prev.Next != this)
             {
-                return string.Format("{0}->{1}", Data, Next.PrintForward());
+                prev.SetNext(this);
             }
-            else
-            {
-                return string.Format("{0}", Data);
-            }
-        }
-
-        public LinkedListNode<T> Clone()
-        {
-            LinkedListNode<T> next2 = null;
-            if (Next != null)
-            {
-                next2 = Next.Clone();
-            }
-            LinkedListNode<T> head2 = new LinkedListNode<T>(Data, next2, null);
-            return head2;
         }
     }
 }
