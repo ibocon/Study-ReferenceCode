@@ -3,6 +3,9 @@ using System;
 
 namespace Solutions
 {
+    /// <summary>
+    /// Chapter 02 연결리스트
+    /// </summary>
     public class LinkedList
     {
         /// <summary>

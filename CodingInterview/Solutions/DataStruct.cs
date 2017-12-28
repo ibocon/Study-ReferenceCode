@@ -1,6 +1,9 @@
 ﻿
 namespace Solutions
 {
+    /// <summary>
+    /// Chapter 01 배열과 문자열
+    /// </summary>
     public class DataStruct
     {
         /// <summary>

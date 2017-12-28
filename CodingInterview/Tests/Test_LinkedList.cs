@@ -216,11 +216,9 @@ namespace Tests
             }
 
             var head = nodes[0];
-            
             Assert.IsTrue(this.linkedList.Q7_IsPalindrome(head));
 
             nodes[length - 2].Data = 9;
-
             Assert.IsFalse(this.linkedList.Q7_IsPalindrome(head));
         }
 
